@@ -1,0 +1,189 @@
+/* ============================================================
+   AN GIA DECOR — METALLIC ARCHITECTURAL PRELOADER (.ag-splash)
+   ============================================================ */
+.ny-splash.ag-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #18171c;
+  background-image: radial-gradient(
+    circle at 50% 42%,
+    #1c1d21 0%,
+    #0e0f12 68%,
+    #070709 100%
+  );
+  overflow: hidden;
+  transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.65s ease;
+  will-change: transform, opacity;
+  animation: none;
+}
+
+/* Hiệu ứng kéo rèm lên khi hoàn tất */
+html[data-splash="leaving"] .ny-splash.ag-splash,
+.ny-splash.ag-splash.is-leaving {
+  transform: translateY(-100%);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: none;
+}
+
+.ny-splash.ag-splash.is-hidden,
+html[data-splash="off"] .ny-splash.ag-splash {
+  display: none;
+}
+
+html[data-splash="leaving"] .ny-splash.ag-splash .ag-splash__svg,
+html[data-splash="leaving"] .ny-splash.ag-splash .ny-splash-svg {
+  transform: none;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.65));
+}
+
+html[data-splash-mode="spin"] .ny-splash.ag-splash .ag-splash__wrap {
+  display: none;
+}
+
+.ag-splash__wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+}
+
+.ag-splash__logo-box {
+  position: relative;
+  width: clamp(132px, 24vw, 176px);
+  height: clamp(132px, 24vw, 176px);
+  overflow: hidden;
+}
+
+.ny-splash.ag-splash .ag-splash__svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.65));
+  overflow: visible;
+  transform: none;
+  transition: none;
+}
+
+/* Các nét vẽ SVG */
+.ag-splash__stroke {
+  fill: none;
+  stroke: url(#agSilverMetal);
+  stroke-width: 6.2;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  opacity: 0;
+}
+
+.ag-splash__stroke.is-drawing {
+  opacity: 1;
+  transition: stroke-dashoffset var(--ag-dur, 0.9s) cubic-bezier(0.45, 0, 0.2, 1)
+    var(--ag-delay, 0s);
+}
+
+/* Vệt ánh kim lướt ngang logo sau khi vẽ xong */
+.ag-splash__sheen {
+  position: absolute;
+  inset: -20%;
+  background: linear-gradient(
+    115deg,
+    transparent 38%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 62%
+  );
+  transform: translateX(-140%);
+  pointer-events: none;
+}
+
+.ny-splash.ag-splash.is-shining .ag-splash__sheen {
+  animation: agSheenSweep 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Chữ thương hiệu AN GIA DECOR màu bạc kim loại */
+.ag-splash__brand {
+  margin: 0;
+  font-family: var(--font-montserrat), "Montserrat", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: clamp(18px, 3.2vw, 26px);
+  font-weight: 400;
+  letter-spacing: 0.36em;
+  padding-left: 0.36em;
+  text-transform: uppercase;
+  background: linear-gradient(100deg, #8b9098 0%, #f4f6f9 35%, #b2b7bf 65%, #e6e9ee 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ny-splash.ag-splash.is-text-visible .ag-splash__brand {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Thanh mảnh chạy tiến độ tinh tế bên dưới */
+.ag-splash__line {
+  width: 110px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.ny-splash.ag-splash.is-text-visible .ag-splash__line {
+  opacity: 1;
+}
+
+.ag-splash__line-fill {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #e8ecf1, transparent);
+  transform: translateX(-100%);
+}
+
+.ny-splash.ag-splash.is-text-visible .ag-splash__line-fill {
+  animation: agLineSlide 1.1s ease-out forwards;
+}
+
+@keyframes agSheenSweep {
+  0% {
+    transform: translateX(-140%);
+  }
+  100% {
+    transform: translateX(140%);
+  }
+}
+
+@keyframes agLineSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ny-splash.ag-splash {
+    transition: opacity 0.3s ease;
+  }
+  html[data-splash="leaving"] .ny-splash.ag-splash,
+  .ny-splash.ag-splash.is-leaving {
+    transform: none;
+    opacity: 0;
+  }
+  .ny-splash.ag-splash.is-shining .ag-splash__sheen,
+  .ny-splash.ag-splash.is-text-visible .ag-splash__line-fill {
+    animation: none !important;
+  }
+}

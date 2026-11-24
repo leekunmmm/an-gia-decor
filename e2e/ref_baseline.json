@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "referenceUrl": "https://www.nhuydecor.vn/",
+    "desktopViewport": { "width": 1440, "height": 900 },
+    "mobileViewport": { "width": 390, "height": 844 },
+    "desktopBreakpointMin": 1100,
+    "mobileBreakpointMax": 1099,
+    "heightTolerancePx": 24,
+    "numericTolerancePx": 4
+  },
+  "tokens": {
+    "colors": {
+      "black": "rgb(0, 0, 0)",
+      "ink": "rgb(20, 22, 25)",
+      "slate": "rgb(41, 45, 52)",
+      "light": "rgb(246, 246, 246)",
+      "megaLight": "rgb(244, 244, 244)",
+      "megaBorder": "rgb(222, 222, 222)",
+      "megaInk": "rgb(29, 30, 34)",
+      "text": "rgb(255, 255, 255)",
+      "textSoft": "rgb(204, 204, 204)",
+      "muted": "rgb(156, 156, 156)",
+      "gold": "rgb(226, 173, 33)",
+      "goldInk": "rgb(138, 101, 16)",
+      "splashBg": "rgb(24, 23, 28)",
+      "mobileDrawerBg": "rgb(22, 23, 27)",
+      "filterBoxBg": "rgb(23, 24, 28)",
+      "yearMenuBg": "rgb(42, 44, 49)",
+      "cardHoverDark": "rgb(54, 55, 56)",
+      "authError": "rgb(192, 57, 43)",
+      "footerError": "rgb(240, 163, 154)",
+      "fabTriggerBg": "rgb(212, 162, 31)",
+      "fabPhoneBg": "rgb(45, 140, 85)"
+    },
+    "fontFamilySubstr": "Montserrat",
+    "containerMaxWidthPx": 1320,
+    "sectionPaddingDesktop": { "top": 128, "bottom": 128 },
+    "sectionPaddingMobile": { "top": 64, "bottom": 64 }
+  },
+  "chrome": {
+    "header": {
+      "desktopTopHeight": 40,
+      "desktopBarHeight": 76,
+      "desktopBarScrolledHeight": 60,
+      "desktopHiddenTransform": "translateY(-40px)",
+      "mobileBarHeight": 64,
+      "scrolledBg": "rgba(20, 22, 25, 0.78)"
+    },
+    "megaMenu": {
+      "desktopColsRatio": [1, 1, 2],
+      "minCategoryCount": 35,
+      "targetCategoryCount": 39,
+      "activeRoomBg": "rgb(244, 244, 244)",
+      "itemsBg": "rgb(244, 244, 244)"
+    },
+    "searchOverlay": {
+      "boxMaxWidth": 760,
+      "boxBg": "rgb(41, 45, 52)",
+      "boxRadiusDesktop": 14,
+      "boxRadiusMobile": 0
+    },
+    "authModal": {
+      "maxWidth": 460,
+      "bg": "rgb(255, 255, 255)",
+      "borderRadius": 16,
+      "inputHeight": 48,
+      "submitHeight": 50,
+      "errorSelector": ".auth-field.has-error, .auth-error",
+      "errorColor": "rgb(192, 57, 43)"
+    },
+    "floatingActions": {
+      "triggerSizeDesktop": 56,
+      "triggerSizeMobile": 52,
+      "actionCircleSize": 46,
+      "requiredChannels": ["shopee", "zalo", "messenger", "phone"],
+      "backToTopSize": 50
+    },
+    "footer": {
+      "formBg": "rgb(41, 45, 52)",
+      "mainBg": "rgb(20, 22, 25)",
+      "formColsDesktop": 2,
+      "formColsMobile": 1,
+      "floatingLabelIdleFontSizeRange": [14, 20],
+      "floatingLabelFocusedFontSize": 12,
+      "floatingLabelFocusedTransform": "translateY(-190%)",
+      "errorBorderColor": "rgb(240, 163, 154)",
+      "mapHeight": 200,
+      "mapRadius": 12,
+      "mapFilter": "grayscale(1) invert(0.9) contrast(0.9)"
+    }
+  },
+  "homeSections": [
+    { "order": 1, "name": "HeroSlider", "selector": ".v2-hero-cover.v2-hero", "bgDesktop": "rgb(0, 0, 0)", "bgMobile": "rgb(0, 0, 0)", "heightDesktop": 900, "heightMobile": 844, "slidesCount": 3 },
+    { "order": 2, "name": "VideoReelsCarousel", "selector": ".v2-tiktok-row", "bgDesktop": "rgb(0, 0, 0)", "bgMobile": "rgb(0, 0, 0)", "heightDesktop": 1030, "heightMobile": 941, "cardAspect": "9 / 16", "cardRadius": 10 },
+    { "order": 3, "name": "FeaturedSplit", "selector": ".v2-featured", "bgDesktop": "rgb(41, 45, 52)", "bgMobile": "rgb(41, 45, 52)", "heightDesktop": 720, "heightMobile": 1182, "tileCount": 2 },
+    { "order": 4, "name": "AboutSection", "selector": ".v2-about", "bgDesktop": "rgb(0, 0, 0)", "bgMobile": "rgb(0, 0, 0)", "heightDesktop": 668, "heightMobile": 646 },
+    { "order": 5, "name": "ServicesSwitcher", "selector": ".v2-services", "bgDesktop": "rgb(20, 22, 25)", "bgMobile": "rgb(20, 22, 25)", "heightDesktop": 844, "heightMobile": 923, "itemsCount": 5, "picAspect": "4 / 3.6", "picRadius": 16 },
+    { "order": 6, "name": "SpotlightSide", "selector": ".v2-spotlight.is-side", "bgDesktop": "rgb(41, 45, 52)", "bgMobile": "rgb(41, 45, 52)", "heightDesktop": 770, "heightMobile": 548, "picAspectDesktop": "16 / 9", "picAspectMobile": "4 / 3", "picRadius": 32 },
+    { "order": 7, "name": "SpotlightOverlay", "selector": ".v2-spotlight.is-overlay", "bgDesktop": "rgb(20, 22, 25)", "bgMobile": "rgb(20, 22, 25)", "heightDesktop": 900, "heightMobile": 555, "picAspectDesktop": "18 / 9", "picAspectMobile": "3 / 4", "picRadius": 32 },
+    { "order": 8, "name": "CommitmentSection", "selector": ".v2-commit", "bgDesktop": "rgb(41, 45, 52)", "bgMobile": "rgb(41, 45, 52)", "heightDesktop": 1348, "heightMobile": 1131, "stageAspectDesktop": "21 / 9", "stageAspectMobile": "4 / 3", "cardMarginTopDesktop": -110, "cardMarginTopMobile": -60 },
+    { "order": 9, "name": "DreamSpacesSection", "selector": ".v2-dream", "bgDesktop": "rgb(20, 22, 25)", "bgMobile": "rgb(246, 246, 246)", "cardBg": "rgb(246, 246, 246)", "cardRadius": 16.5, "heightDesktop": 907, "heightMobile": 1784, "tabsCount": 6 },
+    { "order": 10, "name": "CatalogueBanner", "selector": ".v2-catalogue", "bgDesktop": "rgb(0, 0, 0)", "bgMobile": "rgb(0, 0, 0)", "heightDesktop": 720, "heightMobile": 675, "scrimBg": "rgba(0, 0, 0, 0.62)" },
+    { "order": 11, "name": "RoomApplicationsSection", "selector": ".v2-space", "bgDesktop": "rgb(41, 45, 52)", "bgMobile": "rgb(41, 45, 52)", "heightDesktop": 1023, "heightMobile": 587, "stageAspect": "1600 / 1040", "stageRadiusDesktop": 33, "stageRadiusMobile": 20 },
+    { "order": 12, "name": "CategoryExplorerSection", "selector": ".v2-catx", "bgDesktop": "rgb(20, 22, 25)", "bgMobile": "rgb(0, 0, 0)", "heightDesktop": 1167, "heightMobile": 1879, "tabsCount": 4, "rowsPerTab": 12, "activeRowWipeBg": "rgb(246, 246, 246)", "activeRowTextColor": "rgb(20, 22, 25)", "stickyTop": 96, "picAspect": "673 / 649", "picRadius": 16 },
+    { "order": 13, "name": "HomeProjectsMarquee", "selector": ".v2-hprj", "bgDesktop": "rgb(41, 45, 52)", "bgMobile": "rgb(41, 45, 52)", "heightDesktop": 884, "heightMobile": 503, "marqueeAnimationName": "v2-prjd-run" },
+    { "order": 14, "name": "HomeLibrarySection", "selector": ".v2-hlib", "bgDesktop": "rgb(20, 22, 25)", "bgMobile": "rgb(20, 22, 25)", "heightDesktop": 895, "heightMobile": 693, "colsDesktop": 4, "cardBg": "rgb(204, 204, 204)", "cardHoverBg": "rgb(54, 55, 56)", "cardRadius": 16.5 },
+    { "order": 15, "name": "HomeNewsSection", "selector": ".v2-hnews", "bgDesktop": "rgb(0, 0, 0)", "bgMobile": "rgb(0, 0, 0)", "heightDesktop": 1087, "heightMobile": 645, "colsDesktop": 2, "picAspect": "298 / 191", "picRadius": 8 }
+  ],
+  "innerPages": {
+    "catalog": {
+      "route": "/danh-muc/sofa-bac-au",
+      "canvasBg": "rgb(41, 45, 52)",
+      "bannerHeightDesktop": 378,
+      "bannerHeightMobile": 371,
+      "filterBoxBg": "rgb(23, 24, 28)",
+      "filterBoxRadius": 12,
+      "gridColsDesktop": 3,
+      "gridColsMobile": 2,
+      "cardAspect": "4 / 3",
+      "cardRadius": 8
+    },
+    "productDetail": {
+      "route": "/san-pham/<slug>",
+      "canvasBg": "rgb(41, 45, 52)",
+      "relatedBg": "rgb(20, 22, 25)",
+      "bannerHeightDesktop": 256,
+      "bannerHeightMobile": 216,
+      "pinnedCrumbTopDesktopUnscrolledHeader": 100,
+      "pinnedCrumbTopDesktopHiddenHeader": 60,
+      "pinnedCrumbHeightDesktop": 40,
+      "pinnedCrumbTopMobile": 64,
+      "pinnedCrumbHeightMobile": 50,
+      "stageAspectDesktop": "840 / 560",
+      "stageAspectMobile": "4 / 3",
+      "stageRadius": 8,
+      "contactChannelsCount": 4
+    },
+    "collection": {
+      "route": "/bo-suu-tap",
+      "oddRowBg": "rgb(41, 45, 52)",
+      "evenRowBg": "rgb(20, 22, 25)",
+      "gridColsDesktop": 2,
+      "gridColsMobile": 1,
+      "cardAspect": "645 / 516",
+      "revealAnimationName": "v2-bst-reveal",
+      "revealDuration": "2s"
+    },
+    "projects": {
+      "routes": ["/du-an", "/du-an/loai/nha-pho"],
+      "canvasBg": "rgb(20, 22, 25)",
+      "bannerHeightDesktop": 504,
+      "bannerHeightMobile": 350,
+      "kindTabsCount": 4,
+      "kindArrowSizeDesktop": 40,
+      "kindArrowSizeMobile": 34,
+      "kindArrowActiveTransform": "matrix(0, 1, -1, 0, 0, 0)",
+      "forbidNativeSelect": true,
+      "yearButtonHeight": 50,
+      "yearButtonRadius": 99,
+      "yearMenuBg": "rgb(42, 44, 49)",
+      "gridColsDesktop": 3,
+      "gridColsMobile": 2,
+      "cardAspectDesktop": "296 / 166",
+      "cardAspectMobile": "198 / 127",
+      "cardRadius": 8
+    },
+    "library": {
+      "routes": ["/thu-vien", "/thu-vien/<slug>"],
+      "canvasBg": "rgb(20, 22, 25)",
+      "heroHeightDesktop": 810,
+      "gridColsDesktop": 3,
+      "gridColsMobile": 1,
+      "cardAspect": "16 / 9",
+      "cardRadius": 8,
+      "detailContainerWidth": 994
+    },
+    "news": {
+      "routes": ["/tin-tuc", "/tin-tuc/<slug>"],
+      "canvasBg": "rgb(20, 22, 25)",
+      "heroHeightDesktop": 784,
+      "heroTileCount": 5,
+      "tabsCount": 6,
+      "alternatingFlipClass": ".v2-news-row.is-flip",
+      "detailContainerWidth": 994
+    }
+  },
+  "intentionalDeltas": {
+    "forbiddenBrandStrings": ["nhuydecor.vn", "nhuydecorofficial", "0943 462 335", "0943462335"],
+    "expectedBrandName": "An Gia Decor",
+    "brandPhoneRaw": "0908686868",
+    "localImagePrefix": "/images/",
+    "requireInlineSvgChannelsIn": ["SiteHeader", "FloatingActions", "ProductDetailView", "SiteFooter"],
+    "externalLinkRelRequired": "noopener noreferrer",
+    "megaMenuCategoryCountRange": [35, 45],
+    "allowVideoPosterReadySlots": true,
+    "allowClientOnlyFormValidation": true
+  }
+}
